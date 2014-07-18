@@ -66,7 +66,7 @@ sub tags {
 
 =head1 SYNOPSIS
 
-C<use WWW::Query::UrbanDictionary;>
+C<use WebService::UrbanDictionary;>
 
 C<< my $ud = WebService::UrbanDictionary->new(word => 'perl'); >>
 

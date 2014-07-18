@@ -8,7 +8,7 @@ version 0.001
 
 # SYNOPSIS
 
-`use WWW::Query::UrbanDictionary;`
+`use WebService::UrbanDictionary;`
 
 `my $ud = WebService::UrbanDictionary->new(word => 'perl');`
 

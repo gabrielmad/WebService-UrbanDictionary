@@ -2,7 +2,7 @@
 # Grabs UrbanDictionary.com definitions and other data using its JSON API
 # Author: William Woodruff
 # License: MIT
-# ABSTRACT: Queries UrbanDictionary
+# ABSTRACT: An interfact to UrbanDictionary.com's JSON API
 
 package WebService::UrbanDictionary;
 
@@ -69,14 +69,11 @@ sub get_tags {
 
 1;
 
-=head1 NAME
-
-WWW::Query::UrbanDictionary - An interface to UrbanDictionary's JSON API
-
 =head1 SYNOPSIS
 
-use WWW::Query::UrbanDictionary;
-my $definition = define_word(WORD => 'perl');
+C<use WWW::Query::UrbanDictionary;>
+
+C<< my $definition = define_word(WORD => 'perl'); >>
 
 =head1 DESCRIPTION
 

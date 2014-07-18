@@ -10,7 +10,7 @@ use ExtUtils::MakeMaker 6.30;
 
 
 my %WriteMakefileArgs = (
-  "ABSTRACT" => "Queries UrbanDictionary",
+  "ABSTRACT" => "An interfact to UrbanDictionary.com's JSON API",
   "AUTHOR" => "William Woodruff <william\@tuffbizz.com>",
   "CONFIGURE_REQUIRES" => {
     "ExtUtils::MakeMaker" => "6.30"

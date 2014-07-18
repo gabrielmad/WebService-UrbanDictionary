@@ -1,12 +1,14 @@
 NAME
-    WebService::UrbanDictionary - Queries UrbanDictionary
+    WebService::UrbanDictionary - An interfact to UrbanDictionary.com's JSON
+    API
 
 VERSION
     version 0.001
 
 SYNOPSIS
-    use WWW::Query::UrbanDictionary; my $definition = define_word(WORD =>
-    'perl');
+    "use WWW::Query::UrbanDictionary;"
+
+    "my $definition = define_word(WORD => 'perl');"
 
 DESCRIPTION
     WWW::Query::UrbanDictionary provides a set of simple methods for
@@ -40,9 +42,6 @@ DESCRIPTION
 
     "get_tags(WORD =" $word)>
                 Returns an array of tags associated with the given word.
-
-NAME
-    WWW::Query::UrbanDictionary - An interface to UrbanDictionary's JSON API
 
 SEE ALSO
     <http://search.cpan.org/~sock/WWW-Search-UrbanDictionary-0.4/lib/WWW/Sea

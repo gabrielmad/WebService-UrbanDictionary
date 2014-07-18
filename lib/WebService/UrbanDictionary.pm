@@ -16,8 +16,8 @@ use vars qw($VERSION @ISA @EXPORT @EXPORT_OK %EXPORT_TAGS);
 
 $VERSION = 1.00;
 @ISA = qw(Exporter);
-@EXPORT = qw(define author permalink thumbs_up thumbs_down tags);
-@EXPORT_OK = qw(define author permalink thumbs_up thumbs_down tags);
+@EXPORT = qw(new define author permalink thumbs_up thumbs_down tags);
+@EXPORT_OK = qw(new define author permalink thumbs_up thumbs_down tags);
 
 our @definitions = undef;
 our @tags = undef;
@@ -28,32 +28,38 @@ sub new {
 	my $word = $args{word} or die "No word provided.";
 	my $response = decode_json(get($urban_url . $word)) or die "Error during fetch/decode.";
 	my $self = bless({}, $class);
-
+	@definitions = @{$response->{list}};
+	@tags = @{$response->{tags}};
 	return $self;
 }
 
 sub define {
-	
+	my $index = shift || 0;
+	return $definitions[$index]->{definition};
 }
 
 sub author {
-	
+	my $index = shift || 0;
+	return $definitions[$index]->{author};
 }
 
 sub permalink {
-	
+	my $index = shift || 0;
+	return $definitions[$index]->{permalink};
 }
 
 sub thumbs_up {
-	
+	my $index = shift || 0;
+	return $definitions[$index]->{thumbs_up};
 }
 
 sub thumbs_down {
-	
+	my $index = shift || 0;
+	return $definitions[$index]->{thumbs_down};
 }
 
 sub tags {
-	
+	return @tags;
 }
 
 1;

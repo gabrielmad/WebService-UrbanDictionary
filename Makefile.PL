@@ -27,13 +27,9 @@ my %WriteMakefileArgs = (
     "vars" => 0,
     "warnings" => 0
   },
-  "TEST_REQUIRES" => {
-    "Test" => 0,
-    "Test::More" => 0
-  },
   "VERSION" => "0.001",
   "test" => {
-    "TESTS" => "t/*.t"
+    "TESTS" => ""
   }
 );
 
@@ -42,8 +38,6 @@ my %FallbackPrereqs = (
   "Exporter" => 0,
   "JSON" => 0,
   "LWP::Simple" => 0,
-  "Test" => 0,
-  "Test::More" => 0,
   "strict" => 0,
   "vars" => 0,
   "warnings" => 0

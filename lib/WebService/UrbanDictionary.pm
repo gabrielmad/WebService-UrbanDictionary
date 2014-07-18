@@ -19,52 +19,41 @@ $VERSION = 1.00;
 @EXPORT = qw(define author permalink thumbs_up thumbs_down tags);
 @EXPORT_OK = qw(define author permalink thumbs_up thumbs_down tags);
 
+our @definitions = undef;
+our @tags = undef;
 our $urban_url = "http://api.urbandictionary.com/v0/define?term=";
 
+sub new {
+	my ($class, %args) = @_;
+	my $word = $args{word} or die "No word provided.";
+	my $response = decode_json(get($urban_url . $word)) or die "Error during fetch/decode.";
+	my $self = bless({}, $class);
+
+	return $self;
+}
+
 sub define {
-	my (%keys) = @_;
-	my $word = $keys{word} || die "No word provided.\n";
-	my $index = $keys{index} || 0;
-	my @definitions = @{decode_json(get($urban_url . $word))->{'list'}};
-	return $definitions[$index]->{'definition'}
+	
 }
 
 sub author {
-	my (%keys) = @_;
-	my $word = $keys{word} || die "No word provided.\n";
-	my $index = $keys{index} || 0;
-	my @definitions = @{decode_json(get($urban_url . $word))->{'list'}};
-	return $definitions[$index]->{'author'}
+	
 }
 
 sub permalink {
-	my (%keys) = @_;
-	my $word = $keys{word} || die "No word provided.\n";
-	my $index = $keys{index} || 0;
-	my @definitions = @{decode_json(get($urban_url . $word))->{'list'}};
-	return $definitions[$index]->{'permalink'}
+	
 }
 
 sub thumbs_up {
-	my (%keys) = @_;
-	my $word = $keys{word} || die "No word provided.\n";
-	my $index = $keys{index} || 0;
-	my @definitions = @{decode_json(get($urban_url . $word))->{'list'}};
-	return $definitions[$index]->{'thumbs_up'}
+	
 }
 
 sub thumbs_down {
-	my (%keys) = @_;
-	my $word = $keys{word} || die "No word provided.\n";
-	my $index = $keys{index} || 0;
-	my @definitions = @{decode_json(get($urban_url . $word))->{'list'}};
-	return $definitions[$index]->{'thumbs_down'}
+	
 }
 
 sub tags {
-	my (%keys) = @_;
-	my $word = $keys{word} || die "No word provided.\n";
-	return @{decode_json(get($urban_url . $word))->{'tags'}};
+	
 }
 
 1;

@@ -1,3 +1,7 @@
+# UrbanDictionary.pm
+# Grabs UrbanDictionary.com definitions and other data using its JSON API
+# Author: William Woodruff
+# License: MIT
 # ABSTRACT: Queries UrbanDictionary
 
 package WWW::Query::UrbanDictionary;

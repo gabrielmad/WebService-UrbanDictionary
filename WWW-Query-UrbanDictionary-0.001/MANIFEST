@@ -4,6 +4,7 @@ MANIFEST
 META.yml
 Makefile.PL
 README
+README.md
 dist.ini
 lib/WWW/Query/UrbanDictionary.pm
 t/00test_network.t

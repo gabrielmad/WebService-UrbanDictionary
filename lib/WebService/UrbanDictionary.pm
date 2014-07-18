@@ -68,7 +68,10 @@ sub tags {
 
 C<use WWW::Query::UrbanDictionary;>
 
-C<< my $definition = define_word(word => 'perl'); >>
+C<< my $ud = WebService::UrbanDictionary->new(word => 'perl'); >>
+
+C<my $definition = define();>
+C<my $second_def = define(1);> 
 
 =head1 DESCRIPTION
 
@@ -79,32 +82,36 @@ and other data available through UrbanDictionary's online JSON API.
 
 =over 12
 
-=item C<< define(word => $word, index => $index) >>
+=item C<< new(word => $word) >>
 
-Returns the defintion for the word at the given index.
+Instantiates a new WebService::UrbanDictionary object with the given word.
+
+=item C<< define(index) >>
+
+Returns the definition for the current word at the given index.
 If no index is given, the first definition is given (index 0).
 
-=item C<< author(word => $word, index => $index) >>
+=item C<< author(index) >>
 
 Returns the author of the word's definition at the given index.
 If no index is given, the first definition is given (index 0).
 
-=item C<< permalink(word => $word, index => $index) >>
+=item C<< permalink(index) >>
 
 Returns a permalink to the word's definition at the given index.
 If no index is given, the first definition is given (index 0).
 
-=item C<< thumbs_up(word => $word, index => $index) >>
+=item C<< thumbs_up(index) >>
 
 Returns the number of 'thumbs up's given to the word's definition at the given index.
 If no index is given, the first definition is given (index 0).
 
-=item C<< thumbs_down(word => $word, index => $index) >>
+=item C<< thumbs_down(index) >>
 
 Returns the number of 'thumbs down's given to the word's definition at the given index.
 If no index is given, the first definition is given (index 0).
 
-=item C<< tags(word => $word) >>
+=item C<< tags() >>
 
 Returns an array of tags associated with the given word.
 

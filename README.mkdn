@@ -10,7 +10,10 @@ version 0.001
 
 `use WWW::Query::UrbanDictionary;`
 
-`my $definition = define_word(word => 'perl');`
+`my $ud = WebService::UrbanDictionary->new(word => 'perl');`
+
+`my $definition = define();`
+`my $second_def = define(1);` 
 
 # DESCRIPTION
 
@@ -19,32 +22,36 @@ and other data available through UrbanDictionary's online JSON API.
 
 ## Methods
 
-- `define(word => $word, index => $index)`
+- `new(word => $word)`
 
-    Returns the defintion for the word at the given index.
+    Instantiates a new WebService::UrbanDictionary object with the given word.
+
+- `define(index)`
+
+    Returns the definition for the current word at the given index.
     If no index is given, the first definition is given (index 0).
 
-- `author(word => $word, index => $index)`
+- `author(index)`
 
     Returns the author of the word's definition at the given index.
     If no index is given, the first definition is given (index 0).
 
-- `permalink(word => $word, index => $index)`
+- `permalink(index)`
 
     Returns a permalink to the word's definition at the given index.
     If no index is given, the first definition is given (index 0).
 
-- `thumbs_up(word => $word, index => $index)`
+- `thumbs_up(index)`
 
     Returns the number of 'thumbs up's given to the word's definition at the given index.
     If no index is given, the first definition is given (index 0).
 
-- `thumbs_down(word => $word, index => $index)`
+- `thumbs_down(index)`
 
     Returns the number of 'thumbs down's given to the word's definition at the given index.
     If no index is given, the first definition is given (index 0).
 
-- `tags(word => $word)`
+- `tags()`
 
     Returns an array of tags associated with the given word.
 

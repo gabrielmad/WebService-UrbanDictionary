@@ -118,14 +118,6 @@ Returns an array of tags associated with the given word.
 
 =back
 
-=head1 LICENSE
-
-WWW::Query::UrbanDictionary is released under the MIT License.
-
-=head1 AUTHOR
-
-William Woodruff - L<http://woodruffw.us>
-
 =head1 SEE ALSO
 
 L<http://search.cpan.org/~sock/WWW-Search-UrbanDictionary-0.4/lib/WWW/Search/UrbanDictionary.pm>

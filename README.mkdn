@@ -51,14 +51,6 @@ and other data available through UrbanDictionary's online JSON API.
 
 WWW::Query::UrbanDictionary - An interface to UrbanDictionary's JSON API
 
-# LICENSE
-
-WWW::Query::UrbanDictionary is released under the MIT License.
-
-# AUTHOR
-
-William Woodruff - [http://woodruffw.us](http://woodruffw.us)
-
 # SEE ALSO
 
 [http://search.cpan.org/~sock/WWW-Search-UrbanDictionary-0.4/lib/WWW/Search/UrbanDictionary.pm](http://search.cpan.org/~sock/WWW-Search-UrbanDictionary-0.4/lib/WWW/Search/UrbanDictionary.pm)

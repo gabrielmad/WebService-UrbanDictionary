@@ -44,12 +44,6 @@ DESCRIPTION
 NAME
     WWW::Query::UrbanDictionary - An interface to UrbanDictionary's JSON API
 
-LICENSE
-    WWW::Query::UrbanDictionary is released under the MIT License.
-
-AUTHOR
-    William Woodruff - <http://woodruffw.us>
-
 SEE ALSO
     <http://search.cpan.org/~sock/WWW-Search-UrbanDictionary-0.4/lib/WWW/Sea
     rch/UrbanDictionary.pm>

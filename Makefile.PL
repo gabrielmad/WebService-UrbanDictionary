@@ -15,10 +15,10 @@ my %WriteMakefileArgs = (
   "CONFIGURE_REQUIRES" => {
     "ExtUtils::MakeMaker" => "6.30"
   },
-  "DISTNAME" => "WWW-Query-UrbanDictionary",
+  "DISTNAME" => "WebService-UrbanDictionary",
   "EXE_FILES" => [],
   "LICENSE" => "mit",
-  "NAME" => "WWW::Query::UrbanDictionary",
+  "NAME" => "WebService::UrbanDictionary",
   "PREREQ_PM" => {
     "Exporter" => 0,
     "JSON" => 0,

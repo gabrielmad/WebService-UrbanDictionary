@@ -1,6 +1,6 @@
 use Test;
 BEGIN { plan tests => 3 }
-use WWW::Query::UrbanDictionary;
+use WebService::UrbanDictionary;
 
 ok(1);
 

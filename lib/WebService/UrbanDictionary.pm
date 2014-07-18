@@ -4,7 +4,7 @@
 # License: MIT
 # ABSTRACT: Queries UrbanDictionary
 
-package WWW::Query::UrbanDictionary;
+package WebService::UrbanDictionary;
 
 use strict;
 use warnings;

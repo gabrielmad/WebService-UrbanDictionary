@@ -1,0 +1,76 @@
+# NAME
+
+WebService::UrbanDictionary - Queries UrbanDictionary
+
+# VERSION
+
+version 0.001
+
+# SYNOPSIS
+
+use WWW::Query::UrbanDictionary;
+my $definition = define\_word(WORD => 'perl');
+
+# DESCRIPTION
+
+WWW::Query::UrbanDictionary provides a set of simple methods for accessing definitions
+and other data available through UrbanDictionary's online JSON API.
+
+## Methods
+
+- `define_word(WORD => $word, INDEX => $index)`
+
+    Returns the defintion for the word at the given index.
+    If no index is given, the first definition is given (index 0).
+
+- `get_author(WORD => $word, INDEX => $index)`
+
+    Returns the author of the word's definition at the given index.
+    If no index is given, the first definition is given (index 0).
+
+- `get_permalink(WORD => $word, INDEX => $index)`
+
+    Returns a permalink to the word's definition at the given index.
+    If no index is given, the first definition is given (index 0).
+
+- `get_thumbs_up(WORD => $word, INDEX => $index)`
+
+    Returns the number of 'thumbs up's given to the word's definition at the given index.
+    If no index is given, the first definition is given (index 0).
+
+- `get_thumbs_down(WORD => $word, INDEX => $index)`
+
+    Returns the number of 'thumbs down's given to the word's definition at the given index.
+    If no index is given, the first definition is given (index 0).
+
+- `get_tags(WORD =` $word)>
+
+    Returns an array of tags associated with the given word.
+
+# NAME
+
+WWW::Query::UrbanDictionary - An interface to UrbanDictionary's JSON API
+
+# LICENSE
+
+WWW::Query::UrbanDictionary is released under the MIT License.
+
+# AUTHOR
+
+William Woodruff - [http://woodruffw.us](http://woodruffw.us)
+
+# SEE ALSO
+
+[http://search.cpan.org/~sock/WWW-Search-UrbanDictionary-0.4/lib/WWW/Search/UrbanDictionary.pm](http://search.cpan.org/~sock/WWW-Search-UrbanDictionary-0.4/lib/WWW/Search/UrbanDictionary.pm)
+
+# AUTHOR
+
+William Woodruff <william@tuffbizz.com>
+
+# COPYRIGHT AND LICENSE
+
+This software is Copyright (c) 2014 by William Woodruff.
+
+This is free software, licensed under:
+
+    The MIT (X11) License

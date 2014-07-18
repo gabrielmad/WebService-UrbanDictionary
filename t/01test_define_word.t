@@ -4,8 +4,8 @@ use WebService::UrbanDictionary;
 
 ok(1);
 
-my $def = define_word(WORD => 'perl');
-my $def2 = define_word(WORD => 'hello', INDEX => '0');
+my $def = define(word => 'perl');
+my $def2 = define(word => 'hello', index => '0');
 
 ok($def =~ m/pur'-el/);
 ok($def2 =~ m/what/);

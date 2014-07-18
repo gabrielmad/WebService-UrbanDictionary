@@ -4,6 +4,6 @@ use WebService::UrbanDictionary;
 
 ok(1);
 
-my $link = get_permalink(WORD => 'perl');
+my $link = permalink(word => 'perl');
 
 ok($link =~ m/http:\/\//);

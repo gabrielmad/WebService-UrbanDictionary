@@ -16,54 +16,54 @@ use vars qw($VERSION @ISA @EXPORT @EXPORT_OK %EXPORT_TAGS);
 
 $VERSION = 1.00;
 @ISA = qw(Exporter);
-@EXPORT = qw(define_word get_author get_permalink get_thumbs_up get_thumbs_down get_tags);
-@EXPORT_OK = qw(define_word get_author get_permalink get_thumbs_up get_thumbs_down get_tags);
+@EXPORT = qw(define author permalink thumbs_up thumbs_down tags);
+@EXPORT_OK = qw(define author permalink thumbs_up thumbs_down tags);
 
 our $urban_url = "http://api.urbandictionary.com/v0/define?term=";
 
-sub define_word {
+sub define {
 	my (%keys) = @_;
-	my $word = $keys{WORD} || die "No word provided.\n";
-	my $index = $keys{INDEX} || 0;
+	my $word = $keys{word} || die "No word provided.\n";
+	my $index = $keys{index} || 0;
 	my @definitions = @{decode_json(get($urban_url . $word))->{'list'}};
 	return $definitions[$index]->{'definition'}
 }
 
-sub get_author {
+sub author {
 	my (%keys) = @_;
-	my $word = $keys{WORD} || die "No word provided.\n";
-	my $index = $keys{INDEX} || 0;
+	my $word = $keys{word} || die "No word provided.\n";
+	my $index = $keys{index} || 0;
 	my @definitions = @{decode_json(get($urban_url . $word))->{'list'}};
 	return $definitions[$index]->{'author'}
 }
 
-sub get_permalink {
+sub permalink {
 	my (%keys) = @_;
-	my $word = $keys{WORD} || die "No word provided.\n";
-	my $index = $keys{INDEX} || 0;
+	my $word = $keys{word} || die "No word provided.\n";
+	my $index = $keys{index} || 0;
 	my @definitions = @{decode_json(get($urban_url . $word))->{'list'}};
 	return $definitions[$index]->{'permalink'}
 }
 
-sub get_thumbs_up {
+sub thumbs_up {
 	my (%keys) = @_;
-	my $word = $keys{WORD} || die "No word provided.\n";
-	my $index = $keys{INDEX} || 0;
+	my $word = $keys{word} || die "No word provided.\n";
+	my $index = $keys{index} || 0;
 	my @definitions = @{decode_json(get($urban_url . $word))->{'list'}};
 	return $definitions[$index]->{'thumbs_up'}
 }
 
-sub get_thumbs_down {
+sub thumbs_down {
 	my (%keys) = @_;
-	my $word = $keys{WORD} || die "No word provided.\n";
-	my $index = $keys{INDEX} || 0;
+	my $word = $keys{word} || die "No word provided.\n";
+	my $index = $keys{index} || 0;
 	my @definitions = @{decode_json(get($urban_url . $word))->{'list'}};
 	return $definitions[$index]->{'thumbs_down'}
 }
 
-sub get_tags {
+sub tags {
 	my (%keys) = @_;
-	my $word = $keys{WORD} || die "No word provided.\n";
+	my $word = $keys{word} || die "No word provided.\n";
 	return @{decode_json(get($urban_url . $word))->{'tags'}};
 }
 
@@ -73,7 +73,7 @@ sub get_tags {
 
 C<use WWW::Query::UrbanDictionary;>
 
-C<< my $definition = define_word(WORD => 'perl'); >>
+C<< my $definition = define_word(word => 'perl'); >>
 
 =head1 DESCRIPTION
 
@@ -84,32 +84,32 @@ and other data available through UrbanDictionary's online JSON API.
 
 =over 12
 
-=item C<< define_word(WORD => $word, INDEX => $index) >>
+=item C<< define(word => $word, index => $index) >>
 
 Returns the defintion for the word at the given index.
 If no index is given, the first definition is given (index 0).
 
-=item C<< get_author(WORD => $word, INDEX => $index) >>
+=item C<< author(word => $word, index => $index) >>
 
 Returns the author of the word's definition at the given index.
 If no index is given, the first definition is given (index 0).
 
-=item C<< get_permalink(WORD => $word, INDEX => $index) >>
+=item C<< permalink(word => $word, index => $index) >>
 
 Returns a permalink to the word's definition at the given index.
 If no index is given, the first definition is given (index 0).
 
-=item C<< get_thumbs_up(WORD => $word, INDEX => $index) >>
+=item C<< thumbs_up(word => $word, index => $index) >>
 
 Returns the number of 'thumbs up's given to the word's definition at the given index.
 If no index is given, the first definition is given (index 0).
 
-=item C<< get_thumbs_down(WORD => $word, INDEX => $index) >>
+=item C<< thumbs_down(word => $word, index => $index) >>
 
 Returns the number of 'thumbs down's given to the word's definition at the given index.
 If no index is given, the first definition is given (index 0).
 
-=item C<get_tags(WORD => $word)>
+=item C<< tags(word => $word) >>
 
 Returns an array of tags associated with the given word.
 

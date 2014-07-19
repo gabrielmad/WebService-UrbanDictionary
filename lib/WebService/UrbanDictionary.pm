@@ -2,7 +2,7 @@
 # Grabs UrbanDictionary.com definitions and other data using its JSON API
 # Author: William Woodruff
 # License: MIT
-# ABSTRACT: An interfact to UrbanDictionary.com's JSON API
+# ABSTRACT: An interface to UrbanDictionary.com's JSON API
 
 package WebService::UrbanDictionary;
 

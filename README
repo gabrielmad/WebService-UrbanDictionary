@@ -1,5 +1,5 @@
 NAME
-    WebService::UrbanDictionary - An interfact to UrbanDictionary.com's JSON
+    WebService::UrbanDictionary - An interface to UrbanDictionary.com's JSON
     API
 
 VERSION

@@ -70,8 +70,9 @@ C<use WebService::UrbanDictionary;>
 
 C<< my $ud = WebService::UrbanDictionary->new(word => 'perl'); >>
 
-C<my $definition = define();>
-C<my $second_def = define(1);> 
+C<< my $definition = $ud->define(); >>
+
+C<< my $second_def = $ud->define(1); >> 
 
 =head1 DESCRIPTION
 

@@ -10,7 +10,9 @@ SYNOPSIS
 
     "my $ud = WebService::UrbanDictionary->new(word => 'perl');"
 
-    "my $definition = define();" "my $second_def = define(1);"
+    "my $definition = $ud->define();"
+
+    "my $second_def = $ud->define(1);"
 
 DESCRIPTION
     WWW::Query::UrbanDictionary provides a set of simple methods for

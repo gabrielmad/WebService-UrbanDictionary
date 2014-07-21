@@ -14,7 +14,7 @@ use LWP::Simple;
 use JSON qw(decode_json);
 use vars qw($VERSION @ISA @EXPORT @EXPORT_OK %EXPORT_TAGS);
 
-$VERSION = 1.00;
+$VERSION = 1.001;
 @ISA = qw(Exporter);
 @EXPORT = qw(new define author permalink thumbs_up thumbs_down tags);
 @EXPORT_OK = qw(new define author permalink thumbs_up thumbs_down tags);

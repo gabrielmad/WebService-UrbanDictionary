@@ -3,7 +3,7 @@ NAME
     API
 
 VERSION
-    version 1.000
+    version 1.001
 
 SYNOPSIS
     "use WebService::UrbanDictionary;"

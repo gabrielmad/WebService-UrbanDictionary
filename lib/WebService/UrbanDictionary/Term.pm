@@ -10,10 +10,13 @@ has 'definitions' => ( is => 'ro' );
 has 'sounds'      => ( is => 'ro' );
 
 sub BUILD {
-	my $self = shift;
+	my $self   = shift;
+	my $params = shift;
 	$self->{definitions} = [
-		map { WebService::UrbanDictionary::Term::Definition->new($_) } @{$self->{list}}
+		map { WebService::UrbanDictionary::Term::Definition->new($_) } @{$params->{list}}
 	];
+
+	# delete $self->{list};
 }
 
 sub definition {
